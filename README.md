@@ -16,6 +16,12 @@ Stored dates and contact details are preserved. No portrait, programming languag
 
 Inherited sample pages, posts, collections, CV files, and talk-map content are excluded from the published site. The source template and its license are retained.
 
+## Build validation
+
+The **Jekyll build** workflow builds with strict front-matter checking, checks that only the two existing content pages are generated, verifies that both contain all six publications, checks for inherited profile placeholders, and validates project-site URL paths. Successful runs upload the built site as the `ljt-homepage-site` artifact.
+
+The workflow runs for pushes and pull requests to `master` and can also be run manually from Actions. It validates the site; it does not enable or deploy GitHub Pages.
+
 ## GitHub Pages
 
 The site is configured for `https://teckatich.github.io/LJT-Homepage/` using `url: https://teckatich.github.io` and `baseurl: /LJT-Homepage`.
